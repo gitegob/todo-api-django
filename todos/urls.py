@@ -1,10 +1,8 @@
 from django.urls import path
-from rest_framework import views
-
-from todos.views import get_create_todo, get_update_delete_todo, search_todos
+from todos.views import SearchTodosView, TodoView, TodosView
 
 urlpatterns = [
-    path('', get_create_todo),
-    path('search', search_todos),
-    path('<int:todo_id>', get_update_delete_todo),
+    path('', TodosView.as_view()),
+    path('search', SearchTodosView.as_view()),
+    path('<int:todo_id>', TodoView),
 ]
