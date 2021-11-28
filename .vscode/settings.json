@@ -1,0 +1,11 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "database": "${workspaceFolder:todo_api_django}/db.sqlite3",
+      "name": "db"
+    }
+  ],
+  "sqltools.useNodeRuntime": true
+}
